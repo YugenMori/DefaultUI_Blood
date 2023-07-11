@@ -1,4 +1,4 @@
-## Interface: 100100
+## Interface: 100105
 ## Title: DefaultUI_Blood
 ## Version: 1.0.4_Dragonflight_Classic
 ## Author: Yugen
@@ -18,7 +18,7 @@
 ## SavedVariablesPerCharacter: AbyssUIProfile, AbyssUIAddonSettings, COLOR_MY_UI
 ## OptionalDeps: AbyssUI_TexturePack, Ace3
 
-# Wow Versions: Classic - 11403 | LichKingClassic - 30401 | DragonFlight - 100100
+# Wow Versions: Classic - 11404 | LichKingClassic - 30402 | DragonFlight - 100105
 
 # Libs
 libs\LibStub\LibStub.lua
