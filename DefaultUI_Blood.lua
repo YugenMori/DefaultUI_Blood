@@ -4291,6 +4291,273 @@ f:SetScript("OnEvent", function(self)
   end
 end)
 --]]
+---------------------------- NewUI Frames ----------------------------------
+local ClassicFrames = CreateFrame("Frame")
+ClassicFrames:RegisterEvent("ADDON_LOADED")
+ClassicFrames:SetScript("OnEvent", function(self, event, addon)
+    if (addon == "DefaultUI_Blood") then
+        if GetWoWVersion >= 90500 then
+            -- General
+            for i, v in pairs({ 
+                PlayerFrame.PlayerFrameContainer.FrameTexture,
+                TargetFrame.TargetFrameContainer.FrameTexture,
+                FocusFrame.TargetFrameContainer.FrameTexture,
+                TargetFrameToT.FrameTexture,
+                PlayerFrameAlternateManaBarBorder,
+                PlayerFrameAlternateManaBarLeftBorder,
+                PlayerFrameAlternateManaBarRightBorder,
+                MinimapCompassTexture,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+             -- SettingsPanel
+            for i, v in pairs({ 
+                SettingsPanel.NineSlice.RightEdge,
+                SettingsPanel.NineSlice.LeftEdge,
+                SettingsPanel.NineSlice.TopEdge,
+                SettingsPanel.NineSlice.BottomEdge,
+                SettingsPanel.NineSlice.PortraitFrame,
+                SettingsPanel.NineSlice.TopRightCorner,
+                SettingsPanel.NineSlice.TopLeftCorner,
+                SettingsPanel.NineSlice.BottomLeftCorner,
+                SettingsPanel.NineSlice.BottomRightCorner,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+            -- HelpFrame
+            for i, v in pairs({ 
+                HelpFrame.NineSlice.RightEdge,
+                HelpFrame.NineSlice.LeftEdge,
+                HelpFrame.NineSlice.TopEdge,
+                HelpFrame.NineSlice.BottomEdge,
+                HelpFrame.NineSlice.PortraitFrame,
+                HelpFrame.NineSlice.TopRightCorner,
+                HelpFrame.NineSlice.TopLeftCorner,
+                HelpFrame.NineSlice.BottomLeftCorner,
+                HelpFrame.NineSlice.BottomRightCorner,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+            -- Action Bar
+            for i, v in pairs({ 
+                MainMenuBar.EndCaps.RightEndCap,
+                MainMenuBar.EndCaps.LeftEndCap,
+                MainMenuBar.BorderArt,
+                ActionButton1NormalTexture,
+                ActionButton2NormalTexture,
+                ActionButton3NormalTexture,
+                ActionButton4NormalTexture,
+                ActionButton5NormalTexture,
+                ActionButton6NormalTexture,
+                ActionButton7NormalTexture,
+                ActionButton8NormalTexture,
+                ActionButton9NormalTexture,
+                ActionButton10NormalTexture,
+                ActionButton11NormalTexture,
+                ActionButton12NormalTexture,
+                ActionButton1.RightDivider,
+                ActionButton2.RightDivider,
+                ActionButton3.RightDivider,
+                ActionButton4.RightDivider,
+                ActionButton5.RightDivider,
+                ActionButton6.RightDivider,
+                ActionButton7.RightDivider,
+                ActionButton8.RightDivider,
+                ActionButton9.RightDivider,
+                ActionButton10.RightDivider,
+                ActionButton11.RightDivider,
+                MultiBarLeftButton1NormalTexture,
+                MultiBarLeftButton2NormalTexture,
+                MultiBarLeftButton3NormalTexture,
+                MultiBarLeftButton4NormalTexture,
+                MultiBarLeftButton5NormalTexture,
+                MultiBarLeftButton6NormalTexture,
+                MultiBarLeftButton7NormalTexture,
+                MultiBarLeftButton8NormalTexture,
+                MultiBarLeftButton9NormalTexture,
+                MultiBarLeftButton10NormalTexture,
+                MultiBarLeftButton11NormalTexture,
+                MultiBarLeftButton12NormalTexture,
+                MultiBarRightButton1NormalTexture,
+                MultiBarRightButton2NormalTexture,
+                MultiBarRightButton3NormalTexture,
+                MultiBarRightButton4NormalTexture,
+                MultiBarRightButton5NormalTexture,
+                MultiBarRightButton6NormalTexture,
+                MultiBarRightButton7NormalTexture,
+                MultiBarRightButton8NormalTexture,
+                MultiBarRightButton9NormalTexture,
+                MultiBarRightButton10NormalTexture,
+                MultiBarRightButton11NormalTexture,
+                MultiBarRightButton12NormalTexture,
+                MultiBarBottomLeftButton1NormalTexture,
+                MultiBarBottomLeftButton2NormalTexture,
+                MultiBarBottomLeftButton3NormalTexture,
+                MultiBarBottomLeftButton4NormalTexture,
+                MultiBarBottomLeftButton5NormalTexture,
+                MultiBarBottomLeftButton6NormalTexture,
+                MultiBarBottomLeftButton7NormalTexture,
+                MultiBarBottomLeftButton8NormalTexture,
+                MultiBarBottomLeftButton9NormalTexture,
+                MultiBarBottomLeftButton10NormalTexture,
+                MultiBarBottomLeftButton11NormalTexture,
+                MultiBarBottomLeftButton12NormalTexture,
+                MultiBarBottomRightButton1NormalTexture,
+                MultiBarBottomRightButton2NormalTexture,
+                MultiBarBottomRightButton3NormalTexture,
+                MultiBarBottomRightButton4NormalTexture,
+                MultiBarBottomRightButton5NormalTexture,
+                MultiBarBottomRightButton6NormalTexture,
+                MultiBarBottomRightButton7NormalTexture,
+                MultiBarBottomRightButton8NormalTexture,
+                MultiBarBottomRightButton9NormalTexture,
+                MultiBarBottomRightButton10NormalTexture,
+                MultiBarBottomRightButton11NormalTexture,
+                MultiBarBottomRightButton12NormalTexture,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+            --[[
+            -- ProfessionsFrame
+            for i, v in pairs({ 
+                ProfessionsFrame.NineSlice.TopEdge,
+                ProfessionsFrame.NineSlice.RightEdge,
+                ProfessionsFrame.NineSlice.BottomEdge,
+                ProfessionsFrame.NineSlice.LeftEdge,
+                ProfessionsFrame.NineSlice.TopRightCorner,
+                ProfessionsFrame.NineSlice.TopLeftCorner,
+                ProfessionsFrame.NineSlice.BottomLeftCorner,
+                ProfessionsFrame.NineSlice.BottomRightCorner,
+                ProfessionsFrame.CraftingPage.RankBar.Border,
+                ProfessionsFrame.CraftingPage.SchematicForm.OutputIcon.IconBorder,
+                DropDownList1MenuBackdrop.NineSlice.TopEdge,
+                DropDownList1MenuBackdrop.NineSlice.RightEdge,
+                DropDownList1MenuBackdrop.NineSlice.BottomEdge,
+                DropDownList1MenuBackdrop.NineSlice.LeftEdge,
+                DropDownList1MenuBackdrop.NineSlice.TopRightCorner,
+                DropDownList1MenuBackdrop.NineSlice.TopLeftCorner,
+                DropDownList1MenuBackdrop.NineSlice.BottomLeftCorner,
+                DropDownList1MenuBackdrop.NineSlice.BottomRightCorner,
+                DropDownList2MenuBackdrop.NineSlice.TopEdge,
+                DropDownList2MenuBackdrop.NineSlice.RightEdge,
+                DropDownList2MenuBackdrop.NineSlice.BottomEdge,
+                DropDownList2MenuBackdrop.NineSlice.LeftEdge,
+                DropDownList2MenuBackdrop.NineSlice.TopRightCorner,
+                DropDownList2MenuBackdrop.NineSlice.TopLeftCorner,
+                DropDownList2MenuBackdrop.NineSlice.BottomLeftCorner,
+            DropDownList2MenuBackdrop.NineSlice.BottomRightCorner,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+            --]]
+            -- Bags
+            for i, v in pairs({ 
+                ContainerFrame1.NineSlice,
+                ContainerFrame2.NineSlice,
+                ContainerFrame3.NineSlice,
+                ContainerFrame4.NineSlice,
+                ContainerFrame5.NineSlice,
+                ContainerFrame6.NineSlice,
+                ContainerFrame7.NineSlice,
+                ContainerFrame8.NineSlice,
+                ContainerFrame9.NineSlice,
+                ContainerFrame10.NineSlice,
+                ContainerFrame11.NineSlice,
+                ContainerFrame12.NineSlice,
+                ContainerFrame13.NineSlice,
+                ContainerFrameCombinedBags.NineSlice,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+            -- StatusTrackingBarManager
+            for i, v in pairs({ 
+                StatusTrackingBarManager.BottomBarFrameTexture,
+                StatusTrackingBarManager.TopBarFrameTexture,
+             }) do
+                if AbyssUIAddonSettings ~= nil then
+                    AbyssUI_ColorizationFrameFunction(v)
+                end
+            end
+       -- End
+        else
+            return nil
+        end
+    end     
+end)
+---------------------------- NewUI Functions ----------------------------------
+-- ClassTalentFrame
+local f = CreateFrame("Frame")
+f:RegisterEvent("ADDON_LOADED")
+f:SetScript("OnEvent", function(self, event, name)
+  if name == "Blizzard_ClassTalentUI" and GetWoWVersion >= 90500 then
+    for i, v in pairs({ 
+      ClassTalentFrame.NineSlice.RightEdge,
+      ClassTalentFrame.NineSlice.LeftEdge,
+      ClassTalentFrame.NineSlice.TopEdge,
+      ClassTalentFrame.NineSlice.BottomEdge,
+      ClassTalentFrame.NineSlice.PortraitFrame,
+      ClassTalentFrame.NineSlice.TopRightCorner,
+      ClassTalentFrame.NineSlice.TopLeftCorner,
+      ClassTalentFrame.NineSlice.BottomLeftCorner,
+      ClassTalentFrame.NineSlice.BottomRightCorner,
+     }) do
+      if AbyssUIAddonSettings ~= nil then
+        AbyssUI_ColorizationFrameFunction(v)
+      end
+    end
+  end
+end)
+-- ProfessionsFrame
+local f = CreateFrame("Frame")
+f:RegisterEvent("ADDON_LOADED")
+f:SetScript("OnEvent", function(self, event, name)
+  if name == "Blizzard_Professions" and GetWoWVersion >= 90500 then
+    for i, v in pairs({ 
+        ProfessionsFrame.NineSlice.TopEdge,
+        ProfessionsFrame.NineSlice.RightEdge,
+        ProfessionsFrame.NineSlice.BottomEdge,
+        ProfessionsFrame.NineSlice.LeftEdge,
+        ProfessionsFrame.NineSlice.TopRightCorner,
+        ProfessionsFrame.NineSlice.TopLeftCorner,
+        ProfessionsFrame.NineSlice.BottomLeftCorner,
+        ProfessionsFrame.NineSlice.BottomRightCorner,
+        ProfessionsFrame.CraftingPage.RankBar.Border,
+        ProfessionsFrame.CraftingPage.SchematicForm.OutputIcon.IconBorder,
+        DropDownList1MenuBackdrop.NineSlice.TopEdge,
+        DropDownList1MenuBackdrop.NineSlice.RightEdge,
+        DropDownList1MenuBackdrop.NineSlice.BottomEdge,
+        DropDownList1MenuBackdrop.NineSlice.LeftEdge,
+        DropDownList1MenuBackdrop.NineSlice.TopRightCorner,
+        DropDownList1MenuBackdrop.NineSlice.TopLeftCorner,
+        DropDownList1MenuBackdrop.NineSlice.BottomLeftCorner,
+        DropDownList1MenuBackdrop.NineSlice.BottomRightCorner,
+        DropDownList2MenuBackdrop.NineSlice.TopEdge,
+        DropDownList2MenuBackdrop.NineSlice.RightEdge,
+        DropDownList2MenuBackdrop.NineSlice.BottomEdge,
+        DropDownList2MenuBackdrop.NineSlice.LeftEdge,
+        DropDownList2MenuBackdrop.NineSlice.TopRightCorner,
+        DropDownList2MenuBackdrop.NineSlice.TopLeftCorner,
+        DropDownList2MenuBackdrop.NineSlice.BottomLeftCorner,
+    DropDownList2MenuBackdrop.NineSlice.BottomRightCorner,
+     }) do
+      if AbyssUIAddonSettings ~= nil then
+        AbyssUI_ColorizationFrameFunction(v)
+      end
+    end
+  end
+end)
 -- End
 -- Init
 local f = CreateFrame("Frame")
