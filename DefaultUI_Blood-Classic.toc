@@ -1,5 +1,5 @@
 ## Interface: 11404
-## Title: DefaultUI_Blood
+## Title: DefaultUI_|cffc4121aBlood|r
 ## Version: 1.0.4_Dragonflight_Classic
 ## Author: Yugen
 ## Notes-deDE: Minimalistische Benutzeroberfläche für World of Warcraft
@@ -17,7 +17,7 @@
 ## SavedVariables: AbyssuiDB
 ## SavedVariablesPerCharacter: AbyssUIProfile, AbyssUIAddonSettings, COLOR_MY_UI
 ## OptionalDeps: AbyssUI_TexturePack, Ace3
-
+## IconTexture: Interface\AddOns\DefaultUI_Blood\textures\extra\logo\defaultuiblood
 # Wow Versions: Classic - 11404 | LichKingClassic - 30402 | DragonFlight - 100105
 
 # Libs
