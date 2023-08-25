@@ -1,6 +1,6 @@
 ## Interface: 11404
 ## Title: DefaultUI_|cffc4121aBlood|r
-## Version: 1.0.4_Dragonflight_Classic
+## Version: 10.1.5.3_Classic_Dragonflight
 ## Author: Yugen
 ## Notes-deDE: Minimalistische Benutzeroberfläche für World of Warcraft
 ## Notes-enGB: Minimalist UI for World of Warcraft
